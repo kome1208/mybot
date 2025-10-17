@@ -1,0 +1,8 @@
+node_modules/
+tests/
+package-lock.json
+.env
+json/
+pnpm-lock.yaml
+yarn-error.log
+yarn.lock

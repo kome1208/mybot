@@ -1,0 +1,52 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "bot for discord",
+  "main": "main.mjs",
+  "scripts": {
+    "start": "node --env-file=.env main.mjs",
+    "register": "node --env-file=.env register.mjs"
+  },
+  "repository": {
+    "url": "https://github.com/kome1208/mybot"
+  },
+  "author": "kome1",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@discord-player/extractor": "^7.1.0",
+    "@discordjs/opus": "^0.10.0",
+    "@discordjs/voice": "^0.19.0",
+    "@jimp/core": "^1.6.0",
+    "@jimp/wasm-webp": "^1.6.0",
+    "apng-js": "^1.1.5",
+    "bgutils-js": "^3.2.0",
+    "canvas": "^3.2.0",
+    "deepl-node": "^1.20.0",
+    "discord-player": "^7.1.0",
+    "discord-player-youtubei": "github:kome1208/discord-player-youtubei",
+    "discord-voip": "^7.1.0",
+    "discord.js": "^14.23.2",
+    "entities": "^7.0.0",
+    "express": "^5.1.0",
+    "fast-xml-parser": "^5.3.0",
+    "ffmpeg-static": "^5.2.0",
+    "got": "^14.5.0",
+    "iconv-lite": "^0.7.0",
+    "jimp": "^1.6.0",
+    "jsdom": "^27.0.0",
+    "luxon": "^3.7.2",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.6.0",
+    "opusscript": "^0.1.1",
+    "spotify-web-api-node": "^5.0.2",
+    "yaml": "^2.8.1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "eslint": "^9.37.0",
+    "globals": "^16.4.0"
+  }
+}
