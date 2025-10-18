@@ -14,7 +14,7 @@ export const run = async (interaction) => {
     try {
         const guild = await interaction.guild.fetch();
 
-        if (!guild.splash) return interaction.editReply({ content: "このサーバーにはバナーが設定されていません。" });
+        if (!guild.splash) return interaction.editReply({ content: "このサーバーにはスプラッシュが設定されていません。" });
         
         const embed = new EmbedBuilder()
         .setTitle(`${guild.name}のスプラッシュ画像`)

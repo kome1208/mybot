@@ -7,7 +7,7 @@ export const data = new SlashCommandBuilder()
 .setDescription("dアニメから取得")
 .addSubcommand(command =>
     command.setName("search")
-    .setDescription("楽曲を検索")
+    .setDescription("アニメを検索")
     .addStringOption(option =>
         option.setName("query")
         .setDescription("検索クエリを入力")
