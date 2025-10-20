@@ -31,7 +31,7 @@ export const run = async (interaction) => {
 
         const aiMarkdown = document.querySelector("div.AnswerGenerativeAIMarkdown");
 
-        const results = Array.from(document.querySelectorAll("div.sw-CardBase > div.sw-Card.Algo.Algo-anotherSuggest > section > div.sw-Card__section.sw-Card__section--header > div.sw-Card__headerSpace > div.sw-Card__title"))
+        const results = Array.from(document.querySelectorAll("div.sw-CardBase > div.sw-Card.Algo > section > div.sw-Card__section.sw-Card__section--header > div.sw-Card__headerSpace > div.sw-Card__title"))
         .slice(0, 5)
         .map((result, i) => 
             `${i+1}. [${result.querySelector("h3.sw-Card__titleMain.sw-Card__titleMain--clamp.sw-Card__titleMain--cite.util-Clamps--2")?.textContent}](${result.querySelector("a.sw-Card__titleInner")?.getAttribute("href")})`
