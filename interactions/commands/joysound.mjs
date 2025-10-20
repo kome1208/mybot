@@ -1,4 +1,4 @@
-import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, MessageFlags, SlashCommandBuilder, StringSelectMenuBuilder } from "discord.js";
+import { ActionRowBuilder, ApplicationIntegrationType, ButtonBuilder, ButtonStyle, EmbedBuilder, MessageFlags, SlashCommandBuilder, StringSelectMenuBuilder } from "discord.js";
 import got from "got";
 
 export const data = new SlashCommandBuilder()
@@ -8,7 +8,11 @@ export const data = new SlashCommandBuilder()
     option.setName("query")
     .setDescription("検索クエリ")
     .setRequired(true)
-);
+)
+.setIntegrationTypes(
+    ApplicationIntegrationType.GuildInstall,
+    ApplicationIntegrationType.UserInstall
+);;
 
 /**
  * @param {import("discord.js").ChatInputCommandInteraction} interaction

@@ -1,4 +1,4 @@
-import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, MessageFlags, SlashCommandBuilder } from "discord.js";
+import { ActionRowBuilder, ApplicationIntegrationType, ButtonBuilder, ButtonStyle, EmbedBuilder, MessageFlags, SlashCommandBuilder } from "discord.js";
 import got from "got";
 import { JSDOM } from "jsdom";
 
@@ -9,6 +9,10 @@ export const data = new SlashCommandBuilder()
     option.setName("query")
     .setDescription("検索クエリ")
     .setRequired(true)
+)
+.setIntegrationTypes(
+    ApplicationIntegrationType.GuildInstall,
+    ApplicationIntegrationType.UserInstall
 );
 
 /**

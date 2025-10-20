@@ -1,4 +1,4 @@
-import { EmbedBuilder, MessageFlags, SlashCommandBuilder } from "discord.js";
+import { ApplicationIntegrationType, EmbedBuilder, MessageFlags, SlashCommandBuilder } from "discord.js";
 import got from "got";
 
 export const data = new SlashCommandBuilder()
@@ -22,6 +22,9 @@ export const data = new SlashCommandBuilder()
         .setAutocomplete(true)
         .setRequired(true)
     )
+)
+.setIntegrationTypes(
+    ApplicationIntegrationType.GuildInstall
 );
 
 /**

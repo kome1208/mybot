@@ -1,10 +1,14 @@
-import { SlashCommandBuilder } from "discord.js";
+import { ApplicationIntegrationType, SlashCommandBuilder } from "discord.js";
 import { createCanvas } from "canvas";
 import moment from "moment-timezone";
 
 export const data = new SlashCommandBuilder()
 .setName("year")
-.setDescription("1年の進捗");
+.setDescription("1年の進捗")
+.setIntegrationTypes(
+    ApplicationIntegrationType.GuildInstall,
+    ApplicationIntegrationType.UserInstall
+);
 
 /**
  * @param {import("discord.js").ChatInputCommandInteraction} interaction

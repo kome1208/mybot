@@ -1,4 +1,4 @@
-import { ActionRowBuilder, EmbedBuilder, SlashCommandBuilder, StringSelectMenuBuilder } from "discord.js";
+import { ActionRowBuilder, ApplicationIntegrationType, EmbedBuilder, SlashCommandBuilder, StringSelectMenuBuilder } from "discord.js";
 import moment from "moment";
 import { Dam } from "../../utils/dam-api.mjs";
 
@@ -21,7 +21,11 @@ export const data = new SlashCommandBuilder()
         .setRequired(true)
         .setAutocomplete(true)
     )
-);
+)
+.setIntegrationTypes(
+    ApplicationIntegrationType.GuildInstall,
+    ApplicationIntegrationType.UserInstall
+);;
 
 /**
  * 

@@ -1,4 +1,4 @@
-import { ActionRowBuilder, EmbedBuilder, SlashCommandBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder } from "discord.js";
+import { ActionRowBuilder, ApplicationIntegrationType, EmbedBuilder, SlashCommandBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder } from "discord.js";
 import { ClientType, Innertube } from "youtubei.js";
 
 export const data = new SlashCommandBuilder()
@@ -8,6 +8,10 @@ export const data = new SlashCommandBuilder()
     option.setName("query")
     .setDescription("検索クエリ")
     .setRequired(true)
+)
+.setIntegrationTypes(
+    ApplicationIntegrationType.GuildInstall,
+    ApplicationIntegrationType.UserInstall
 );
 
 /**

@@ -1,4 +1,4 @@
-import { ActionRowBuilder, ButtonBuilder, ButtonStyle, ContainerBuilder, EmbedBuilder, MessageFlags, SectionBuilder, SlashCommandBuilder, StringSelectMenuBuilder, TextDisplayBuilder } from "discord.js";
+import { ActionRowBuilder, ApplicationIntegrationType, ButtonBuilder, ButtonStyle, ContainerBuilder, EmbedBuilder, MessageFlags, SectionBuilder, SlashCommandBuilder, StringSelectMenuBuilder, TextDisplayBuilder } from "discord.js";
 import got from "got";
 import { JSDOM } from "jsdom";
 import { readFileSync } from "node:fs";
@@ -22,7 +22,11 @@ export const data = new SlashCommandBuilder()
             { name: "ユーザー", value: "user" }
         ])
     )
-);
+)
+.setIntegrationTypes(
+    ApplicationIntegrationType.GuildInstall,
+    ApplicationIntegrationType.UserInstall
+);;
 
 const apiBaseUrl = "https://api.github.com";
 const headers =  {

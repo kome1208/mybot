@@ -1,8 +1,12 @@
-import { SlashCommandBuilder } from "discord.js";
+import { ApplicationIntegrationType, SlashCommandBuilder } from "discord.js";
 
 export const data = new SlashCommandBuilder()
 .setName("ping")
-.setDescription("ぴん");
+.setDescription("ぴん")
+.setIntegrationTypes(
+    ApplicationIntegrationType.GuildInstall,
+    ApplicationIntegrationType.UserInstall
+);
 
 /**
  * @param {import("discord.js").ChatInputCommandInteraction} interaction

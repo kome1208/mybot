@@ -1,4 +1,4 @@
-import { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, SlashCommandBuilder, StringSelectMenuBuilder } from "discord.js";
+import { ActionRowBuilder, ApplicationIntegrationType, ButtonBuilder, ButtonStyle, EmbedBuilder, SlashCommandBuilder, StringSelectMenuBuilder } from "discord.js";
 import moment from "moment";
 import Spotify from "spotify-web-api-node";
 
@@ -9,6 +9,10 @@ export const data = new SlashCommandBuilder()
     option.setName("query")
     .setDescription("検索クエリ")
     .setRequired(true)
+)
+.setIntegrationTypes(
+    ApplicationIntegrationType.GuildInstall,
+    ApplicationIntegrationType.UserInstall
 );
     
 /**
