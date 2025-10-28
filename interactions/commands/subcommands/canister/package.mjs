@@ -41,7 +41,7 @@ export const run = async (interaction) => {
             .setTitle(pkg.name ?? pkg.package)
             .setDescription(pkg.description)
             .setImage(pkg.header_url)
-            .setThumbnail(pkg.icon_url)
+            .setThumbnail(pkg.icon_url?.startsWith("http") ? pkg.icon_url : null)
             .setFields(
                 { name: "package", value: pkg.package, inline: true },
                 { name: "version", value: pkg.version, inline: true },
